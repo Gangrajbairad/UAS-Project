@@ -19,8 +19,8 @@ def segment_grass(image):
     
     # Overlay colors to distinguish burnt and green grass
     result = image.copy()
-    result[burnt_mask > 0] = (0, 0, 255)  # Red for burnt grass
-    result[green_mask > 0] = (0, 255, 0)  # Green for green grass
+    result[burnt_mask > 0] = (230, 173, 216)  # Pink for burnt grass
+    result[green_mask > 0] = (0, 255, 255)  # Yellow for green grass
 
     return result, burnt_mask, green_mask
 
@@ -93,5 +93,6 @@ def process_image(image_path):
     cv2.destroyAllWindows()
 
 # Example usage
-image_path = '3'
+#image_path is variable and we can get output by entering the sample image.
+image_path = '3.png' 
 process_image(image_path)
